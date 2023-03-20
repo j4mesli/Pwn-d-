@@ -46,8 +46,9 @@ inline void print_bitboard(U64 bitboard) {
         for (int f = 0; f < 8; f++) {
             int square = 8 * r + f;
 
+            // output board's file on the first rank
             if (!f) {
-                // output board's rankr
+                // output board's rank
                 std::cout << "  " << 8 - r << " ";
             }
 
