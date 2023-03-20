@@ -39,7 +39,7 @@ inline void remove_bit(U64 &bitboard, int square) { // NEED BITBOARD REFERENCE
 
 // print bitboard
 inline void print_bitboard(U64 bitboard) {
-    printf("\n");
+    std::cout << std::endl;
     // iterate over board's ranks
     for (int r = 0; r < 8; r++) {
         // iterate over board's files
@@ -48,19 +48,19 @@ inline void print_bitboard(U64 bitboard) {
 
             if (!f) {
                 // output board's rankr
-                printf("  %d ", 8 - r);
+                std::cout << "  " << 8 - r << " ";
             }
 
             // output bitboard's square with 1 or 0 depending on the bit state
-            printf(" %d", get_bit(bitboard, square));
+            std::cout << " " << get_bit(bitboard, square);
         }
-        printf("\n");
+        std::cout << std::endl;
     }
     // output board's files
-    printf("\n     a b c d e f g h \n\n");
+    std::cout << "\n     a b c d e f g h \n" << std::endl;
 
     // output bitboard's decimal value
-    printf("     bitboard: dec_%llu\n", bitboard);
+    std::cout << "     bitboard: dec_" << bitboard << std::endl;
 }
 
 #endif
